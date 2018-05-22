@@ -1,0 +1,14 @@
+spring.servlet.multipart.enabled: false
+spring:
+  datasource:
+    url: ${POSTGRES_URL}
+    password: ${POSTGRES_PASSWORD}
+    username: ${POSTGRES_USER}
+  jpa:
+    properties.hibernate:
+      dialect: org.hibernate.dialect.PostgreSQL9Dialect
+      format_sql: true
+      jdbc.batch_size: 100
+      temp.use_jdbc_metadata_defaults: false
+    hibernate:
+      ddl-auto: create

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/>
+    <soap:Body>
+        <LoadingStockStateResponse xmlns="http://lamoda.ru/xsd/wms/stock-state">
+            <item>
+                <id>7</id>
+                <sku>ME146ECES289CH1460</sku>
+                <count>1</count>
+            </item>
+            <item>
+                <id>10</id>
+                <sku>WR224AMCX569E410</sku>
+                <count>1</count>
+            </item>
+            <item>
+                <id>12</id>
+                <sku>VI060AWEE738R390</sku>
+                <count>2</count>
+            </item>
+        </LoadingStockStateResponse>
+    </soap:Body>
+</soap:Envelope>

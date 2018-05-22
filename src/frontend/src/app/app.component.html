@@ -1,0 +1,30 @@
+<main role="main">
+  <div class="jumbotron"> <!-- jumbotron-fluid -->
+    <div class="container">
+      <h1 class="display-4">Lamoda test app</h1>
+
+      <div class="alert alert-danger alert-dismissible fade show" role="alert" *ngIf="errorMessage != null">
+        <h4 class="alert-heading">Произошла ошибка:</h4>
+        <p>{{ errorMessage }}</p>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="errorMessage = null;">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="isSuccess">
+        <h4 class="alert-heading">Файл успешно отправлен.</h4>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="isSuccess = false;">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="load-file">Выберете файл для загрузки:</label>
+          <input type="file" class="form-control-file" id="load-file" (change)="handleFileInput($event.target.files)">
+        </div>
+        <button type="submit" class="btn btn-primary">Отправить</button>
+      </form>
+    </div>
+  </div>
+</main>
