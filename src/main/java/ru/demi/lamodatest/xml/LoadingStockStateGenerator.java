@@ -109,7 +109,7 @@ public class LoadingStockStateGenerator {
             System.out.println("Complete!");
 
         } catch (FileNotFoundException | XMLStreamException e) { //
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 
